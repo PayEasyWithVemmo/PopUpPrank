@@ -4,12 +4,14 @@
     <script>
         window.onload = function() {
             for (let i = 0; i < 20; i++) {
-                alert('Vote For Kamala!!!');
+                setTimeout(function() {
+                    alert('Vote For Kamala!!!');
+                }, i * 500); // 500 milliseconds = 0.5 seconds
             }
         };
     </script>
 </head>
 <body>
-    <h1>This is the official Website of the 2028 Kamala Campagn. Vote for me!!! Got u</h1>
+    <h1>This is the official Website of the 2028 Kamala Campaign. Vote for me!!! Got u</h1>
 </body>
 </html>
