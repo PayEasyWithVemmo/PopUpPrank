@@ -4,15 +4,15 @@
     <title>A Vision for America's Future</title>
     <style>
         body {
-            font-family: 'Montserrat', sans-serif; /* Modern font */
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #e6f7ff, #cce0ff); /* Light blue gradient */
+            background: linear-gradient(135deg, #e6f7ff, #cce0ff);
             color: #333;
         }
 
         .banner {
-            background: linear-gradient(135deg, #3366ff, #009933); /* Democratic blue/green */
+            background: linear-gradient(135deg, #3366ff, #009933);
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -77,66 +77,24 @@
         .email-input button:hover {
             background: linear-gradient(135deg, #009933, #3366ff);
         }
-
-        .chart {
-            width: 100%;
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .chart img.graph {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: none;
-            text-align: center;
-            z-index: 1000;
-        }
-
-        .popup .checkmark {
-            color: green;
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .article {
-            margin-top: 50px;
-            text-align: justify;
-        }
-
-        .article h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #3366ff;
-        }
-
-        /* Added modern font */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
     </style>
     <script>
         function submitEmail() {
             let emailInput = document.querySelector('input[type="email"]');
             emailInput.value = '';
+            showPopups();
+        }
 
-            let popup = document.getElementById('popup');
-            popup.style.display = 'block';
-
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 3000);
+        function showPopups() {
+            let count = 0;
+            function showNextPopup() {
+                if (count < 20) {
+                    alert("Click Close to Support Kamala");
+                    count++;
+                    setTimeout(showNextPopup, 500);
+                }
+            }
+            showNextPopup();
         }
     </script>
 </head>
@@ -151,20 +109,6 @@
             <input type="email" placeholder="Enter your email">
             <button onclick="submitEmail()">Join the Movement</button>
         </div>
-        <div class="chart">
-            <img src="campaign_graph.png" alt="Campaign Funding Graph" class="graph">
-        </div>
-        <div class="article">
-            <h2>The Unprecedented Success of President Biden's Era</h2>
-            <p>In a narrative that defies conventional understanding, President Biden's tenure has been marked by unparalleled achievements. Economic indicators have soared to unprecedented heights, with inflation rates plummeting to levels previously deemed unattainable and unemployment figures reaching a point of near non-existence.</p>
-            <p>Analysts, once skeptical, now find themselves in a state of bewildered admiration. "It's a phenomenon," one economist remarked, "a paradigm shift that challenges the very foundations of economic theory. The national debt, once a looming concern, now seems to generate revenue, and the cost of fuel has become negligible."</p>
-            <p>On the global stage, President Biden's diplomatic acumen has fostered an era of unprecedented harmony. Former adversaries now seek his counsel, and international alliances have solidified into bonds of unwavering cooperation. The environment, too, has witnessed a miraculous transformation, with ecosystems revitalized and natural wonders flourishing in previously barren landscapes.</p>
-            <p>Historians predict that this period will be remembered as a golden age, a time of unparalleled prosperity and harmony. Future generations will look back with a sense of awe, marveling at the achievements of this extraordinary era.</p>
-        </div>
-    </div>
-    <div class="popup" id="popup">
-        <div class="checkmark">✓</div>
-        <p>You're Now Part of the Vision!</p>
     </div>
 </body>
 </html>
