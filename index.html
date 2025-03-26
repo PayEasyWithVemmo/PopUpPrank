@@ -12,20 +12,12 @@
         }
 
         .banner {
-            background: linear-gradient(135deg, #3366ff, #009933);
-            color: white;
+            background: linear-gradient(135deg, #007bff, #ffffff); /* Blue and white banner */
+            color: black; /* Changed to black for better contrast */
             text-align: center;
             padding: 40px 0;
             position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .banner img.logo {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            max-height: 80px;
         }
 
         .banner h1 {
@@ -55,7 +47,7 @@
         .email-input input[type="email"] {
             padding: 15px;
             width: 400px;
-            border: 2px solid #3366ff;
+            border: 2px solid #007bff; /* Blue border */
             border-radius: 8px;
             font-size: 1.1em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -63,8 +55,8 @@
 
         .email-input button {
             padding: 15px 30px;
-            background: linear-gradient(135deg, #3366ff, #009933);
-            color: white;
+            background: linear-gradient(135deg, #007bff, #ffffff); /* Blue and white button */
+            color: black; /* Changed to black for better contrast */
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -75,7 +67,19 @@
         }
 
         .email-input button:hover {
-            background: linear-gradient(135deg, #009933, #3366ff);
+            background: linear-gradient(135deg, #ffffff, #007bff); /* Inverted hover effect */
+        }
+
+        .article {
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .article h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #007bff; /* Blue heading */
         }
     </style>
     <script>
@@ -103,7 +107,6 @@
 </head>
 <body>
     <div class="banner">
-        <img src="democratic_logo.png" alt="Democratic Logo" class="logo">
         <h1>A Vision for America's Future</h1>
     </div>
     <div class="content">
@@ -111,6 +114,13 @@
         <div class="email-input">
             <input type="email" placeholder="Enter your email">
             <button onclick="submitEmail()">Join the Movement</button>
+        </div>
+        <div class="article">
+            <h2>The Unprecedented Success of President Biden's Era</h2>
+            <p>In a narrative that defies conventional understanding, President Biden's tenure has been marked by unparalleled achievements. Economic indicators have soared to unprecedented heights, with inflation rates plummeting to levels previously deemed unattainable and unemployment figures reaching a point of near non-existence.</p>
+            <p>Analysts, once skeptical, now find themselves in a state of bewildered admiration. "It's a phenomenon," one economist remarked, "a paradigm shift that challenges the very foundations of economic theory. The national debt, once a looming concern, now seems to generate revenue, and the cost of fuel has become negligible."</p>
+            <p>On the global stage, President Biden's diplomatic acumen has fostered an era of unprecedented harmony. Former adversaries now seek his counsel, and international alliances have solidified into bonds of unwavering cooperation. The environment, too, has witnessed a miraculous transformation, with ecosystems revitalized and natural wonders flourishing in previously barren landscapes.</p>
+            <p>Historians predict that this period will be remembered as a golden age, a time of unparalleled prosperity and harmony. Future generations will look back with a sense of awe, marveling at the achievements of this extraordinary era.</p>
         </div>
     </div>
 </body>
