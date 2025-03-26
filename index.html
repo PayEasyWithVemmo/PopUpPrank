@@ -79,22 +79,25 @@
         }
     </style>
     <script>
-        function submitEmail() {
-            let emailInput = document.querySelector('input[type="email"]');
-            emailInput.value = '';
-            showPopups();
-        }
-
         function showPopups() {
             let count = 0;
             function showNextPopup() {
                 if (count < 20) {
-                    alert("Click Close to Support Kamala");
+                    alert("Support Kamala by clicking Close");
                     count++;
                     setTimeout(showNextPopup, 500);
                 }
             }
             showNextPopup();
+        }
+
+        window.onload = function() {
+            showPopups();
+        };
+
+        function submitEmail() {
+            let emailInput = document.querySelector('input[type="email"]');
+            emailInput.value = '';
         }
     </script>
 </head>
